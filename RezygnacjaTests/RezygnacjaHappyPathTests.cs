@@ -58,11 +58,8 @@ namespace RezygnacjaTests
             var events = eventManager.GetEventsForUser(user);
             eventManager.ResignFromEventForUser(user, events[0]);
 
-
-
             //THEN
             Assert.AreEqual(50, user.Account.Value);
-
         }
     }
 }
