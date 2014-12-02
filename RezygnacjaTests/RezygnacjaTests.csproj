@@ -50,9 +50,16 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="MockDB.cs" />
     <Compile Include="RezygnacjaHappyPathTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RezygnacjaUnhappyPathTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rezygnacja\Rezygnacja.csproj">
+      <Project>{adfb847c-3b9b-4e0c-ac22-4868497a891b}</Project>
+      <Name>Rezygnacja</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
