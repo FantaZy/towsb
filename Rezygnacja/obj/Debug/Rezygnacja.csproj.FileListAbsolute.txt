@@ -1,6 +1,0 @@
-C:\Users\Lab\Desktop\towzsb\Rezygnacja\Rezygnacja\Rezygnacja\bin\Debug\Rezygnacja.exe.config
-C:\Users\HP_G62-china_\Documents\Visual Studio 2012\Projects\TOWZSB\Rezygnacja\bin\Debug\Rezygnacja.exe.config
-C:\Users\HP_G62-china_\Documents\Visual Studio 2012\Projects\TOWZSB\Rezygnacja\bin\Debug\Rezygnacja.exe
-C:\Users\HP_G62-china_\Documents\Visual Studio 2012\Projects\TOWZSB\Rezygnacja\bin\Debug\Rezygnacja.pdb
-C:\Users\HP_G62-china_\Documents\Visual Studio 2012\Projects\TOWZSB\Rezygnacja\obj\Debug\Rezygnacja.exe
-C:\Users\HP_G62-china_\Documents\Visual Studio 2012\Projects\TOWZSB\Rezygnacja\obj\Debug\Rezygnacja.pdb
