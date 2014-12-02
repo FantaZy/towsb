@@ -1,1 +1,7 @@
 C:\Users\HP_G62-china_\Documents\Visual Studio 2012\Projects\TOWZSB\RezygnacjaTests\obj\Debug\RezygnacjaTests.csprojResolveAssemblyReference.cache
+C:\Users\HP_G62-china_\Documents\Visual Studio 2012\Projects\TOWZSB\RezygnacjaTests\bin\Debug\RezygnacjaTests.dll
+C:\Users\HP_G62-china_\Documents\Visual Studio 2012\Projects\TOWZSB\RezygnacjaTests\bin\Debug\RezygnacjaTests.pdb
+C:\Users\HP_G62-china_\Documents\Visual Studio 2012\Projects\TOWZSB\RezygnacjaTests\bin\Debug\Rezygnacja.exe
+C:\Users\HP_G62-china_\Documents\Visual Studio 2012\Projects\TOWZSB\RezygnacjaTests\bin\Debug\Rezygnacja.pdb
+C:\Users\HP_G62-china_\Documents\Visual Studio 2012\Projects\TOWZSB\RezygnacjaTests\obj\Debug\RezygnacjaTests.dll
+C:\Users\HP_G62-china_\Documents\Visual Studio 2012\Projects\TOWZSB\RezygnacjaTests\obj\Debug\RezygnacjaTests.pdb

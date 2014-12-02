@@ -8,7 +8,7 @@ namespace Rezygnacja
 {
     public class User
     {
-        public string name;
+        private string name {get; set;}
 
         public User()
         {

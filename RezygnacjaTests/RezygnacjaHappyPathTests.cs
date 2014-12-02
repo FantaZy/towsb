@@ -38,7 +38,7 @@ namespace RezygnacjaTests
             var events = eventManager.GetEventsForUser(user);
             eventManager.ResignFromEventForUser(user, events[0]);
 
-            var updatedEvents = eventsManager.GetEventsForUser(user);
+            var updatedEvents = eventManager.GetEventsForUser(user);
 
             //THEN
             Assert.AreEqual(0, updatedEvents.Count);
@@ -46,7 +46,7 @@ namespace RezygnacjaTests
         }
 
         [TestMethod]
-        public void TestHappyPath_WhenUserResignedFromEventSuccessfuullyMoneyIsReturnedToUsersAccount()
+        public void TestHappyPath_WhenUserResignedFromEventSuccessfullyMoneyIsReturnedToUsersAccount()
         {
             //GIVEN
             var user = new User("user1");
@@ -58,7 +58,7 @@ namespace RezygnacjaTests
             var events = eventManager.GetEventsForUser(user);
             eventManager.ResignFromEventForUser(user, events[0]);
 
-            
+
 
             //THEN
             Assert.AreEqual(50, user.Account.Value);
