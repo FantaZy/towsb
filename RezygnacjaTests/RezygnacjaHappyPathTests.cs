@@ -12,9 +12,9 @@ namespace RezygnacjaTests
         {
             //GIVEN
             var user = new User("user1");
-            DBAdapter adapter = new MockDB();
+            IDBAdapter adapter = new MockDB();
             var gig = new EventGig("Jazz Concert", 50);
-            adapter.RecordData(gig, user);
+            adapter.RecordData(gig, user, 50);
             
             var eventManager = new EventManager(adapter);
             
@@ -30,8 +30,8 @@ namespace RezygnacjaTests
         {
             //GIVEN
             var user = new User("user1");
-            DBAdapter adapter = new MockDB();
-            adapter.RecordData(new EventGig("Jazz Concert", 50), user);
+            IDBAdapter adapter = new MockDB();
+            adapter.RecordData(new EventGig("Jazz Concert", 50), user, 50);
 
             var eventManager = new EventManager(adapter);
             //WHEN
@@ -50,8 +50,8 @@ namespace RezygnacjaTests
         {
             //GIVEN
             var user = new User("user1");
-            DBAdapter adapter = new MockDB();
-            adapter.RecordData(new EventGig("Jazz Concert", 50), user);
+            IDBAdapter adapter = new MockDB();
+            adapter.RecordData(new EventGig("Jazz Concert", 50), user, 50);
 
             var eventManager = new EventManager(adapter);
             //WHEN

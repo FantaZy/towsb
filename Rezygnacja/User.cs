@@ -8,7 +8,18 @@ namespace Rezygnacja
 {
     public class User
     {
+        public class MoneyPurse
+        {
+            public enum Currency
+            {
+                PLN
+            };
+            public Currency OfCurrency;
+            public int Value;
+        }
+
         private string name {get; set;}
+        public MoneyPurse Account { get; set; }
 
         public User()
         {
@@ -18,6 +29,7 @@ namespace Rezygnacja
         public User(string name)
         {
             this.name = name;
+            Account = new MoneyPurse();
         }
     }
 }

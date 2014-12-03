@@ -6,35 +6,38 @@ using Rezygnacja;
 
 namespace RezygnacjaTests
 {
-    class MockDB : DBAdapter
+    class MockDB : IDBAdapter
     {
-        List<KeyValuePair<EventGig, User>> usersGigs;
+        private Dictionary<User, List<EventGig>> data = new Dictionary<User, List<EventGig>>();
 
-        public MockDB()
-        {
-            this.usersGigs = new List<KeyValuePair<EventGig, User>>();
-        }
 
-        public override void RecordData(EventGig gig, User user)
+        public void RecordData(EventGig gig, User user, int startValue)
         {
-            this.usersGigs.Add(new KeyValuePair<EventGig, User>(gig, user));
-        }
-
-        public override List<EventGig> GetEventsForUser(User user)
-        {
-            List<EventGig> ret = new List<EventGig>();
-            foreach (var pair in usersGigs)
+            if (!data.ContainsKey(user))
             {
-                if (pair.Value == user)
-                    ret.Add(pair.Key);
+                user.Account.Value = startValue;
+                data[user] = new List<EventGig>();
+                data[user].Add(gig);
             }
-            return ret;
+            else
+            {
+                data[user].Add(gig);
+            }
         }
 
-        public override void DeleteUserFromEvent(EventGig eventGig, User user)
+        public List<EventGig> GetEventsForUser(User user)
         {
-            var item = usersGigs.FirstOrDefault(x => x.Key == eventGig && x.Value == user);
-            usersGigs.Remove(item);
+            if (data.ContainsKey(user))
+                return data[user];
+            return new List<EventGig>();
+        }
+
+        public void DeleteUserFromEvent(EventGig eventGig, User user)
+        {
+            if (data.ContainsKey(user))
+            {
+                data[user].Remove(eventGig);
+            }
         }
     }
 }

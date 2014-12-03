@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Rezygnacja;
 
+
 namespace RezygnacjaTests
 {
     [TestClass]
@@ -12,8 +13,8 @@ namespace RezygnacjaTests
         {
             //GIVEN
             var user = new User("user1");
-            DBAdapter adapter = new MockDB();
-            adapter.RecordData(new EventGig("Jazz Concert", 50), user);
+            IDBAdapter adapter = new MockDB();
+            adapter.RecordData(new EventGig("Jazz Concert", 50), user, 50);
 
             var eventManager = new EventManager(adapter);
             var nonExistantEvent = new EventGig("Folk Concert", 125);

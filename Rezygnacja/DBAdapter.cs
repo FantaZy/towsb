@@ -6,19 +6,20 @@ using System.Threading.Tasks;
 
 namespace Rezygnacja
 {
-    public class DBAdapter
+    public class DBAdapter : IDBAdapter
     {
-        public virtual void RecordData(EventGig gig, User user)
+
+        public void RecordData(EventGig gig, User user, int startValue)
         {
             throw new NotImplementedException();
         }
 
-        public virtual List<EventGig> GetEventsForUser(User user)
+        public List<EventGig> GetEventsForUser(User user)
         {
             throw new NotImplementedException();
         }
 
-        public virtual void DeleteUserFromEvent(EventGig eventGig, User user)
+        public void DeleteUserFromEvent(EventGig eventGig, User user)
         {
             throw new NotImplementedException();
         }

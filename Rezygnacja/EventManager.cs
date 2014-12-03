@@ -8,9 +8,9 @@ namespace Rezygnacja
 {
     public class EventManager
     {
-        private DBAdapter adapter;
+        private IDBAdapter adapter;
 
-        public EventManager(DBAdapter adapter)
+        public EventManager(IDBAdapter adapter)
         {
             this.adapter = adapter;
         }
