@@ -59,7 +59,7 @@ namespace RezygnacjaTests
             eventManager.ResignFromEventForUser(user, events[0]);
 
             //THEN
-            Assert.AreEqual(50, user.Account.Value);
+            Assert.AreEqual(50, user.Account.Funds);
         }
     }
 }

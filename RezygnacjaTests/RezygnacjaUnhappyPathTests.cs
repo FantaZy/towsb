@@ -18,13 +18,13 @@ namespace RezygnacjaTests
             var eventManager = new EventManager(adapter);
             var nonExistantEvent = new EventGig("Folk Concert", 125);
             int eventsCount = eventManager.GetEventsForUser(user).Count;
-            int money = user.Account.Value;
+            int money = user.Account.Funds;
             //WHEN
-            eventManager.ResignFromEventForUser(user, nonExistantEvent);
+            string message = eventManager.ResignFromEventForUser(user, nonExistantEvent);
 
             //THEN
-            Assert.AreEqual(eventsCount, eventManager.GetEventsForUser(user).Count);
-            Assert.AreEqual(money, user.Account.Value);
+            Assert.AreEqual("error", message);
+            Assert.AreEqual(money, user.Account.Funds);
         }
     }
 }
