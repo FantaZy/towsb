@@ -12,7 +12,7 @@ namespace Rezygnacja
 
         List<EventGig> GetEventsForUser(User user);
 
-        void DeleteUserFromEvent(EventGig eventGig, User user);
+        bool DeleteUserFromEvent(EventGig eventGig, User user);
 
     }
 }

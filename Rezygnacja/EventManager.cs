@@ -22,7 +22,8 @@ namespace Rezygnacja
 
         public void ResignFromEventForUser(User user, EventGig eventGig)
         {
-            adapter.DeleteUserFromEvent(eventGig, user);
+            if (!adapter.DeleteUserFromEvent(eventGig, user))
+                MessageQueue.AddMessage(user, "Nie można usunąć takiego eventu bo go nie ma");
         }
     }
 }

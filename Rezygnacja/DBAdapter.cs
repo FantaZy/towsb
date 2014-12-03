@@ -19,7 +19,7 @@ namespace Rezygnacja
             throw new NotImplementedException();
         }
 
-        public void DeleteUserFromEvent(EventGig eventGig, User user)
+        public bool DeleteUserFromEvent(EventGig eventGig, User user)
         {
             throw new NotImplementedException();
         }

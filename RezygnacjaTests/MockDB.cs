@@ -32,12 +32,13 @@ namespace RezygnacjaTests
             return new List<EventGig>();
         }
 
-        public void DeleteUserFromEvent(EventGig eventGig, User user)
+        public bool DeleteUserFromEvent(EventGig eventGig, User user)
         {
             if (data.ContainsKey(user))
             {
-                data[user].Remove(eventGig);
+                return data[user].Remove(eventGig);
             }
+            return false;
         }
     }
 }

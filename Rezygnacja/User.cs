@@ -21,11 +21,6 @@ namespace Rezygnacja
         private string name {get; set;}
         public MoneyPurse Account { get; set; }
 
-        public User()
-        {
-            name = "unknown";
-        }
-
         public User(string name)
         {
             this.name = name;

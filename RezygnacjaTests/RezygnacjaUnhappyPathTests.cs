@@ -20,11 +20,12 @@ namespace RezygnacjaTests
             var nonExistantEvent = new EventGig("Folk Concert", 125);
             int eventsCount = eventManager.GetEventsForUser(user).Count;
             int money = user.Account.Value;
+            int oldMessageCount = MessageQueue.MessageCount(user);
             //WHEN
             eventManager.ResignFromEventForUser(user, nonExistantEvent);
 
             //THEN
-            Assert.AreEqual(eventsCount, eventManager.GetEventsForUser(user).Count);
+            Assert.AreNotEqual(MessageQueue.MessageCount(user), oldMessageCount);
             Assert.AreEqual(money, user.Account.Value);
         }
     }
